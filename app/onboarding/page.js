@@ -1,7 +1,7 @@
 import ChatInterface from "@/components/onboarding/ChatInterface";
 
 export const metadata = {
-  title: "Matchmaker",
+  title: "AI Interview | Matchmaker",
   description: "Chat with our AI concierge to discover your intentional matches.",
 };
 
