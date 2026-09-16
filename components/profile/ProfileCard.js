@@ -7,14 +7,55 @@ export default function ProfileCard({ profile }) {
   return (
     <div className={`glass-card ${styles.card}`}>
       <div className={styles.header}>
-        <div className={styles.avatar}>
-          {profile.name ? profile.name.charAt(0).toUpperCase() : "?"}
-        </div>
+        {profile.selfie ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img src={profile.selfie} alt={profile.name} className={styles.avatar} style={{ objectFit: "cover" }} />
+        ) : (
+          <div className={styles.avatar}>
+            {profile.name ? profile.name.charAt(0).toUpperCase() : "?"}
+          </div>
+        )}
         <div>
-          <h2 className="heading-sm mb-1">{profile.name}</h2>
-          <p className="text-accent text-sm uppercase tracking-wide">Compatibility Profile</p>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <h2 className="heading-sm mb-1">{profile.name}{profile.age ? `, ${profile.age}` : ""}</h2>
+            {profile.isVerified && (
+              <span title="Verified Identity" style={{ color: "#10b981", fontSize: "1.1rem", display: "inline-flex" }}>
+                ✓
+              </span>
+            )}
+          </div>
+          <p className="text-accent text-sm uppercase tracking-wide">
+            {profile.location ? `${profile.location} · ` : ""}Compatibility Profile
+          </p>
+          {profile.linkedin && (
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: "0.8rem", color: "var(--accent-secondary)", textDecoration: "underline", display: "inline-block", marginTop: "2px" }}
+            >
+              Verified LinkedIn Profile ↗
+            </a>
+          )}
         </div>
       </div>
+
+      {profile.photos && profile.photos.length > 0 && (
+        <div style={{ marginBottom: "var(--space-8)" }}>
+          <h3 className={styles.sectionTitle}>Uploaded Photos ({profile.photos.length})</h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))", gap: "0.6rem" }}>
+            {profile.photos.map((photo, i) => (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={i}
+                src={photo}
+                alt={`Photo ${i + 1}`}
+                style={{ width: "100%", aspectRatio: "4/5", objectFit: "cover", borderRadius: "8px", border: "1px solid var(--border-subtle)" }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className={styles.bio}>
         <p className="text-lg">{profile.bio}</p>

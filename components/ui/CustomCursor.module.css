@@ -1,0 +1,132 @@
+.cursorWrapper {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  display: block;
+}
+
+/* Dynamic ambient spotlight following mouse */
+.cursorSpotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  margin-top: -350px;
+  margin-left: -350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsla(16, 95%, 65%, 0.07) 0%, hsla(28, 90%, 55%, 0.02) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: opacity 0.4s ease;
+}
+
+/* Precise center dot */
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  margin-left: -4px;
+  background-color: var(--accent-primary, #ff6b4a);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px var(--accent-primary, #ff6b4a), 0 0 20px rgba(255, 107, 74, 0.6);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, background-color 0.2s ease, opacity 0.3s ease;
+}
+
+/* Outer smooth-trailing ring */
+.cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  margin-left: -18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              margin 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease,
+              opacity 0.3s ease;
+}
+
+/* Hover state over interactive elements */
+.hovered .cursorRing {
+  width: 58px;
+  height: 58px;
+  margin-top: -29px;
+  margin-left: -29px;
+  border-color: var(--accent-primary, #ff6b4a);
+  background-color: hsla(16, 90%, 65%, 0.12);
+  box-shadow: 0 0 25px rgba(235, 110, 75, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.hovered .cursorDot {
+  transform: translate3d(0, 0, 0) scale(1.5);
+  background-color: #fff;
+  box-shadow: 0 0 14px #fff, 0 0 25px var(--accent-primary, #ff6b4a);
+}
+
+/* Click state */
+.clicked .cursorRing {
+  transform: translate3d(0, 0, 0) scale(0.85);
+  border-color: #fff;
+  background-color: hsla(16, 90%, 65%, 0.25);
+}
+
+.clicked .cursorDot {
+  transform: translate3d(0, 0, 0) scale(0.7);
+}
+
+/* Floating stardust / sparkle particles */
+.sparkleParticle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff 0%, hsl(24, 95%, 60%) 100%);
+  box-shadow: 0 0 6px hsl(16, 90%, 65%);
+  pointer-events: none;
+  z-index: 9997;
+  animation: sparkleFade 0.65s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes sparkleFade {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(0.2);
+  }
+}
+
+/* Hide on touch devices */
+@media (pointer: coarse) {
+  .cursorWrapper {
+    display: none !important;
+  }
+}

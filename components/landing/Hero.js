@@ -11,22 +11,29 @@ export default function Hero() {
       </div>
 
       <div className={`container ${styles.container}`}>
-        <h1 className={`${styles.headline} animate-slide-up`}>
+        <div className={`${styles.badge} animate-slide-up`}>
+          <span className={styles.badgeDot}></span>
+          <span className={styles.badgeText}>Curated AI Matchmaking</span>
+        </div>
+
+        <h1 className={`${styles.headline} animate-slide-up delay-1`}>
           <span className={styles.displayLine}>STOP SWIPING.</span>
           <span className={`${styles.displayLine} gradient-text`}>START CONNECTING.</span>
         </h1>
 
-        <p className={`${styles.subtitle} animate-slide-up delay-1`}>
+        <p className={`${styles.subtitle} animate-slide-up delay-2`}>
           One introduction at a time.
         </p>
 
         <Button
           href="/onboarding"
           variant="primary"
-          className={`${styles.primaryCta} animate-slide-up delay-2`}
+          className={`${styles.primaryCta} animate-slide-up delay-3`}
         >
           Begin
-          <span className={styles.arrowIcon}>→</span>
+          <svg className={styles.arrowIcon} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </Button>
       </div>
 

@@ -18,6 +18,47 @@
   z-index: 10;
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.badgeText {
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
 .headline {
   margin-bottom: var(--space-6);
   display: flex;
@@ -34,19 +75,24 @@
 }
 
 .subtitle {
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   margin-bottom: var(--space-10);
+  font-weight: 500;
 }
 
 .primaryCta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 2.2rem !important;
-  font-size: 1.05rem !important;
-  font-weight: 600 !important;
+  gap: 0.65rem;
+  padding: 1rem 2.6rem !important;
+  font-size: 1.15rem !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  box-shadow: 0 0 30px rgba(235, 110, 75, 0.4), 0 8px 32px rgba(0, 0, 0, 0.6) !important;
 }
 
 .arrowIcon {
@@ -55,7 +101,7 @@
 }
 
 .primaryCta:hover .arrowIcon {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 .footnote {

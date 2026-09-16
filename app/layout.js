@@ -1,4 +1,5 @@
 import "./globals.css";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 export const metadata = {
   title: "Matchmaker | AI-Powered Intentional Dating",
@@ -9,8 +10,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <CustomCursor />
         {children}
       </body>
     </html>

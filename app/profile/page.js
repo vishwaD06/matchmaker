@@ -59,14 +59,17 @@ export default function ProfilePage() {
           
           <ProfileCard profile={profile} />
           
-          <div style={{ textAlign: "center", marginTop: "4rem" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "4rem", flexWrap: "wrap" }}>
             <Button variant="primary" onClick={() => alert("Matching engine coming soon in Phase 2!")}>
               Find My Match
             </Button>
-            <p className="text-secondary text-sm mt-4">
-              (This will trigger the vector similarity search in the next phase)
-            </p>
+            <Button variant="secondary" href="/onboarding">
+              Retake Interview
+            </Button>
           </div>
+          <p className="text-secondary text-sm mt-4 text-center" style={{ textAlign: "center" }}>
+            (Profile synthesized from your personal interview answers)
+          </p>
         </div>
       </div>
     </main>
