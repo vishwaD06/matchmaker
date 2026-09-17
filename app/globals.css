@@ -8,27 +8,27 @@
 }
 
 :root {
-  /* Color Palette — Deep black with warm coral/peach/amber accents */
-  --bg-dark: #0a0a0a;
-  --bg-darker: #050505;
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --bg-elevated: rgba(255, 255, 255, 0.04);
+  /* Color Palette — Calming Editorial Beige & Linen Palette (gentle on the eyes) */
+  --bg-dark: #f6f3ed;
+  --bg-darker: #ede8df;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-elevated: #ffffff;
 
-  --accent-primary: hsl(16, 90%, 65%);       /* Coral */
-  --accent-primary-hover: hsl(16, 90%, 58%);
-  --accent-secondary: hsl(30, 85%, 65%);     /* Peach/Amber */
-  --accent-warm: hsl(24, 95%, 60%);          /* Warm orange */
-  --accent-glow: hsla(16, 90%, 65%, 0.35);
+  --accent-primary: #8a5a40;       /* Toasted Bronze / Terracotta */
+  --accent-primary-hover: #724731;
+  --accent-secondary: #b08257;     /* Warm Caramel Sand */
+  --accent-warm: #c5976b;          /* Soft Honey Ochre */
+  --accent-glow: rgba(138, 90, 64, 0.18);
 
-  --text-primary: hsl(40, 20%, 95%);         /* Warm white */
-  --text-secondary: hsl(0, 0%, 55%);
-  --text-muted: hsl(0, 0%, 38%);
-  --text-inverse: #0a0a0a;
+  --text-primary: #1e1b18;         /* Deep Espresso / Charcoal Ink */
+  --text-secondary: #5e574f;       /* Muted Warm Slate */
+  --text-muted: #8c8277;           /* Soft Taupe */
+  --text-inverse: #fcfbf9;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(255, 255, 255, 0.15);
-  --border-accent: hsla(16, 90%, 65%, 0.25);
+  --border-subtle: rgba(30, 27, 24, 0.08);
+  --border-focus: rgba(30, 27, 24, 0.18);
+  --border-accent: rgba(138, 90, 64, 0.35);
 
   /* Typography */
   --font-display: 'Domino Brick', 'Impact', sans-serif;
@@ -276,27 +276,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .orb-1 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, hsla(16, 90%, 55%, 0.6) 0%, transparent 70%);
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(228, 206, 183, 0.65) 0%, transparent 70%);
   top: -10%;
   right: -5%;
   animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, hsla(30, 85%, 60%, 0.5) 0%, transparent 70%);
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(235, 218, 198, 0.55) 0%, transparent 70%);
   bottom: 20%;
   left: -8%;
   animation-delay: -7s;
 }
 
 .orb-3 {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, hsla(24, 95%, 55%, 0.4) 0%, transparent 70%);
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(215, 195, 172, 0.45) 0%, transparent 70%);
   top: 40%;
   right: 15%;
   animation-delay: -14s;

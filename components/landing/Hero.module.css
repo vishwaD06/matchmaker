@@ -23,12 +23,12 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.45rem 1.1rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
   margin-bottom: var(--space-6);
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 12px rgba(30, 27, 24, 0.05);
 }
 
 .badgeDot {
@@ -92,7 +92,7 @@
   font-family: var(--font-display) !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase;
-  box-shadow: 0 0 30px rgba(235, 110, 75, 0.4), 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 4px 20px rgba(30, 27, 24, 0.16) !important;
 }
 
 .arrowIcon {
