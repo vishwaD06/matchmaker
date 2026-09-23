@@ -11,7 +11,7 @@ export default function CTA() {
 
           <div className={styles.content}>
             <span className={styles.badge}>INTENTIONAL DATING STARTS HERE</span>
-            
+
             <h2 className={styles.title}>
               YOUR PERSON <br />
               <span className="gradient-text">IS WAITING.</span>
@@ -23,17 +23,17 @@ export default function CTA() {
 
             <div className={styles.buttonWrapper}>
               <Button href="/onboarding" variant="primary" className={styles.actionBtn}>
-                Begin Your Interview
+                Ready for some crazy convo...
                 <span className={styles.btnArrow}>→</span>
               </Button>
             </div>
 
             <div className={styles.trustRow}>
-              <span className={styles.trustItem}>🔒 100% Private & Confidential</span>
+              <span className={styles.trustItem}>Private & Confidential</span>
               <span className={styles.trustDivider}>•</span>
-              <span className={styles.trustItem}>🚫 No Public Browsing</span>
+              <span className={styles.trustItem}> No Public Browsing</span>
               <span className={styles.trustDivider}>•</span>
-              <span className={styles.trustItem}>✨ One Match at a Time</span>
+              <span className={styles.trustItem}> One Match at a Time</span>
             </div>
           </div>
         </div>
