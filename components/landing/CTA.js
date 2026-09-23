@@ -29,7 +29,7 @@ export default function CTA() {
             </div>
 
             <div className={styles.trustRow}>
-              <span className={styles.trustItem}>Private & Confidential</span>
+              <span className={styles.trustItem}>Chillax its Confidential</span>
               <span className={styles.trustDivider}>•</span>
               <span className={styles.trustItem}> No Public Browsing</span>
               <span className={styles.trustDivider}>•</span>
